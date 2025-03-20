@@ -40,8 +40,6 @@ pydantic-core==2.27.2
     # via pydantic
 python-dotenv==1.0.1
     # via dotenv
-pyufw==0.0.3
-    # via -r requirements.in
 typing-extensions==4.12.2
     # via
     #   aiogram

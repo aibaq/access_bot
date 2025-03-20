@@ -1,5 +1,22 @@
+`access_bot` is a simple telegram bot that controls http/https access to webserver using `ufw`
+
+# Installation
+1. Clone the repository
+2. Create a virtualenv and install the requirements
+3. Create a `.env` file as in the `.env.example` file
+
+# Preparing ufw:
+```
+sudo ufw default deny incoming
+sudo ufw allow ssh // or any other default ports
+sudo ufw enable
+```
+
+# Running the bot
+Create a systemd service file for the bot and run the main.py
 
 
+# Using with docker
 When using with docker make the following changes to make `ufw` work with docker:
 
 Open /etc/ufw/after.rules in an editor:
@@ -22,6 +39,7 @@ Append the following lines to the end of the file (you might need to replace eth
 COMMIT
 ```
 
+Then run:
 ```
 sudo systemctl restart ufw
 ```
